@@ -1,0 +1,8 @@
+.flexFooter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 10px;
+  font-size: 32px;
+}
