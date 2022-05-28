@@ -1,7 +1,17 @@
-body{
-  padding: 50px;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  list-style: none;
+  text-decoration: none;
 }
 
-h1{
-  color: #333
+html, 
+body, 
+#root{
+  background-color: #efefef;
+  height: 100%;
 }

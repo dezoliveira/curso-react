@@ -1,43 +1,72 @@
-import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
-import Home from './pages/Home'
-import Contato from './pages/Contato'
-import Empresa from './pages/Empresa'
-import Navbar from './components/layout/Navbar';
-import Footer from './components/layout/Footer';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import Company from './components/pages/Company';
+import Home from './components/pages/Home';
+import Contact from './components/pages/Contact';
+import Projects from './components/pages/Projects';
+import NewProject from './components/pages/NewProject';
+import Container from './components/layout/Container';
+import Navbar from './components/layout/Navbar'
+import Footer from './components/layout/Footer'
 
 function App() {
-
   return (
     <Router>
 
       <Navbar></Navbar>
 
-      <Routes>
+      <Container customClass="min-height">
 
-        <Route 
-          exact
-          path="/" 
-          element={
-            <Home></Home>
-          }> 
-        </Route>
+        <Routes>
 
-        <Route 
-          path="/empresa"
-          element={
-            <Empresa></Empresa>
-          }> 
-        </Route>
+          <Route 
+            exact
+            path="/" 
+            element={
+              <Home></Home>
+            }> 
 
-        <Route 
-          path="/contato" 
-          element={
-            <Contato></Contato>
-          }> 
-        </Route>
+          </Route>
 
-      </Routes>
-      
+          <Route 
+            exact
+            path="/newproject" 
+            element={
+              <NewProject></NewProject>
+            }> 
+
+          </Route>
+
+          <Route 
+            exact
+            path="/company" 
+            element={
+              <Company></Company>
+            }> 
+
+          </Route>
+
+          <Route 
+            exact
+            path="/contact" 
+            element={
+              <Contact></Contact>
+            }>
+
+          </Route>
+
+          <Route 
+            exact
+            path="/projects" 
+            element={
+              <Projects></Projects>
+            }> 
+
+          </Route>
+
+        </Routes>
+
+      </Container>
+
       <Footer></Footer>
 
     </Router>
